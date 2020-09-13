@@ -1,0 +1,16 @@
+.Variable{
+
+  width: 290px !important;
+}
+.Pipe{
+
+  width: 10px !important;
+}
+.Salida{
+
+  width: 290px !important;
+}
+.slice{
+  width: 30px !important;
+  margin-left: 5px;
+}

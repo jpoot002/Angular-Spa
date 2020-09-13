@@ -1,0 +1,115 @@
+<table class="table table-hover ">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col" class="Variable">Variable</th>
+      <th scope="col" class="Pipe">Pipe</th>
+      <th scope="col" class="Salida">Salida</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{name}}></td>
+      <td>uppercase</td>
+      <td>{{name | uppercase}}</td>
+    </tr>
+    <tr>
+      <td>{{name}}</td>
+      <td>lowercase</td>
+      <td>{{name | lowercase}}</td>
+    </tr>
+    <tr>
+      <td>{{name}}</td>
+      <td>slice</td>
+      <td>{{name | slice:2}}</td>
+    </tr>
+    <tr>
+      <td>{{name}}</td>
+      <td>slice</td>
+      <td>{{name | slice:0:4}}</td>
+    </tr>
+    <tr>
+      <td>{{pi}}</td>
+      <td>number</td>
+      <td>{{pi | number}}</td>
+    </tr>
+    <tr>
+      <td>{{pi}}</td>
+      <td>number:'3.1-5'</td>
+      <td>{{pi |  number:'3.1-5'}}</td>
+    </tr>
+    <tr>
+      <td>{{pi}}</td>
+      <td>number:'1.0-0'</td>
+      <td>{{pi |  number:'1.0-0'}}</td>
+    </tr>
+    <tr>
+      <td>{{pii}}</td>
+      <td>number</td>
+      <td>{{pii | number}}</td>
+    </tr>
+    <tr>
+      <td>{{pii}}</td>
+      <td>number:'3.1-5'</td>
+      <td>{{pii |  number:'3.1-5'}}</td>
+    </tr>
+    <tr>
+      <td>{{pii}}</td>
+      <td>number:'1.0-0'</td>
+      <td>{{pii |  number:'1.0-0'}}</td>
+    </tr>
+    <tr>
+      <td>{{a}}</td>
+      <td>percent</td>
+      <td>{{a | percent}}</td>
+    </tr>
+    <tr>
+      <td>{{b}}</td>
+      <td>percent:'4.3-5'</td>
+      <td>{{b | percent:'4.3-5'}}</td>
+    </tr>
+    <tr>
+      <td>{{a}}</td>
+      <td>currency</td>
+      <td>{{a | currency}}</td>
+    </tr>
+    <tr>
+      <td>{{a}}</td>
+      <td>currency:'CAD'</td>
+      <td>{{a | currency:'EUR'}}</td>
+    </tr>
+    <tr>
+      <td>{{a}}</td>
+      <td>currency:'CAD':'code'</td>
+      <td>{{a | currency:'EUR':'code'}}</td>
+    </tr>
+    <tr>
+      <td>{{b}}</td>
+      <td>currency:'CAD':'symbol':'4.2-2'</td>
+      <td>{{b | currency:'EUR':'symbol':'4.2-2'}}</td>
+    </tr>
+    <tr>
+      <td>{{greeting}} {{arrived}}</td>
+      <td>async</td>
+      <td>
+        <button (click)="clicked()">{{ arrived ? 'Reset' : 'Resolve' }}</button>
+        <span>Wait for it... {{ greeting | async }}</span>
+      </td>
+    </tr>
+    <tr>
+      <td>{{today}}</td>
+      <td>date</td>
+      <td>{{today | date}}</td>
+    </tr>
+    <tr>
+      <td>{{today}}</td>
+      <td>date:'fullDate'</td>
+      <td>{{today | date:'fullDate'}}</td>
+    </tr>
+    <tr>
+      <td>{{today}}</td>
+      <td>date:'h:mm a z'</td>
+      <td>{{today | date:'h:mm a z'}}</td>
+    </tr>
+  </tbody>
+</table>
+

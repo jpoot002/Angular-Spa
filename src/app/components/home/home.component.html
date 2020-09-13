@@ -1,0 +1,77 @@
+<div class="container .main-container">
+  <h1>Demos <small>angular</small></h1>
+  <hr>
+  <h5>NgStyle</h5>
+
+  <p [style.fontSize.px]="tamano">
+  Hola mundo... esta es una etiqueta
+  </p>
+  <button class="btn btn-primary" (click)="TamTexMax()" style="margin-right: 10px;">
+    <i class="fa fa-plus"></i>
+  </button>
+  <button class="btn btn-primary" (click)="TamTexMen()">
+    <i class="fa fa-minus"></i>
+  </button>
+  <hr>
+  <h5>ngclas</h5>
+  <div [ngClass]="alerta" role="alert">
+    A simple primary alert—check it out!
+  </div>
+  <p>
+  </p>
+  <button class="btn btn-secondary" (click)="alerta='alert-secondary'" style="margin-right: 10px;">
+    alert-secondary
+  </button>
+  <button class="btn btn-success" (click)="alerta='alert-success'">
+    alert-success
+  </button>
+  <p>
+  </p>
+  <h4 [ngClass]="{'text-danger': propiedades.danger, 'text-info':!propiedades.danger}">
+    HOLA MUNDO
+  </h4>
+  <button (click)="propiedades.danger = !propiedades.danger" type="button" name="button" class="btn btn-danger" [ngClass]="{'btn-danger':propiedades.danger}">
+    Cambio
+  </button>
+  <hr>
+  <h4>Proceso Asincrono</h4>
+
+  <button (click)="EjecutarProceso()" class="btn btn-primary" [disabled]="loading">
+    <span *ngIf="!loading"><i class="fa fa-save"></i>Guardar Cambios</span>
+    <span *ngIf="loading"><i class="fa fa-spinner fa-spin"></i>Espere por favor...</span>
+
+</button>
+  <hr>
+  <h4>
+    Directivas personal
+  </h4>
+  <p [appResaldato]="'red'">
+    Hola mundo
+  </p>
+  <hr>
+  <h4>
+    ngSwith
+  </h4>
+  <div [ngSwitch]="alertainformacion">
+    <div *ngSwitchCase="'success'">success</div>
+    <div *ngSwitchCase="'info'">info</div>
+    <div *ngSwitchCase="'warning'">warning</div>
+  </div>
+
+  <div [ngSwitch]="alertainformacion">
+    <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+      A simple secondary alert—check it out!
+    </div>
+    <div *ngSwitchCase="'info'"class="alert alert-info"  role="alert">
+      A simple info alert—check it out!
+    </div>
+    <div *ngSwitchCase="'warning'"  class="alert alert-warning" role="alert">
+      A simple warning alert—check it out!
+    </div>
+  </div>
+
+  <button type="button" (click)="alertainformacion='success'" class="btn btn-danger">
+    cambiar
+  </button>
+</div>
+

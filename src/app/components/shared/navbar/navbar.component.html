@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand"  [routerLink]="['heroes']" >
+    <img src="assets/img/A-64.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Heroes
+  </a>
+
+  <div class="collapse navbar-collapse" >
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['about']" >Pipes</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['home']" >Miscelaneos</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" >
+
+      <input class="form-control mr-sm-2" type="search" placeholder="Buscar Héroe" aria-label="Search"  #buscarTexto (keyup.click)="buscarheroe(buscarTexto.value)">
+      <button (click)="buscarheroe(buscarTexto.value)" class="btn btn-outline-success my-2 my-sm-0" type="button">Buscar</button>
+    </form>
+  </div>
+</nav>

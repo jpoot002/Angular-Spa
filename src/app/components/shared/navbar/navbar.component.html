@@ -6,17 +6,31 @@
 
   <div class="collapse navbar-collapse" >
     <ul class="navbar-nav mr-auto">
+
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['about']" >Pipes</a>
       </li>
+
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['home']" >Miscelaneos</a>
       </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0" >
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Formularios
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['Reactive']">Reactive</a>
+          <a class="dropdown-item" [routerLink]="['Template']">Template</a>
+        </div>
+      </li>
+
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0" >
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar Héroe" aria-label="Search"  #buscarTexto (keyup.click)="buscarheroe(buscarTexto.value)">
       <button (click)="buscarheroe(buscarTexto.value)" class="btn btn-outline-success my-2 my-sm-0" type="button">Buscar</button>
     </form>
+
   </div>
 </nav>
